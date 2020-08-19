@@ -5,9 +5,9 @@
 }
 
 body{
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-    
+    background-color: #E4E4E1;
+    background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+        background-blend-mode: normal, multiply;
     color:white;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
@@ -35,7 +35,7 @@ form button{
 
 form button{
 
-    color:#C4C1DF;
+    color:rgba(34, 26, 26, 0.664);
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -44,7 +44,7 @@ form button{
 
 form button:hover{
 
-    background:#C4C1DF;
+    background:rgba(34, 26, 26, 0.664);
     color: white;
 
 }
@@ -137,7 +137,7 @@ select{
 .select::after{
     content: "\25BC";
     position: absolute;
-    background:#C4C1DF;
+    background:rgba(34, 26, 26, 0.664);
     top:0;
     right:0;
     padding: 1rem;
@@ -147,5 +147,11 @@ select{
 
 .select:hover::after{
     background:white;
-    color: #C4C1DF;
+    color: rgba(34, 26, 26, 0.664);
 }
+
+header{
+    background-color: rgba(255, 255, 255, 0.781);
+    color: rgb(32, 31, 31);
+}
+
