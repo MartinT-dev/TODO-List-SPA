@@ -1,4 +1,4 @@
-# TODO-List---SPA
+# TODO-List
 This is a simple Single Page Application for a TODO List. You can add items to the TODO and check / delete them. All items are stored into a local storage.
 
 You can type the task which you want to add to the list and it pressing the cross button.
