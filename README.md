@@ -3,7 +3,7 @@ This is a simple Single Page Application for a TODO List. You can add tasks to t
 
 You can type the task which you want to add to the list and it pressing the cross button.
 
-<img src="gifs/add-items2.gif">
+<img src="gifs/todo2.1.gif">
 
 
 You can check/uncheck and delete the task whenever you want to.
