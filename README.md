@@ -1,9 +1,9 @@
 # TODO-List
-This is a Single Page Application for a TODO List. You can add tasks to the list and check / delete them. All items are stored into a local storage.
+This is a Single Page Application for a TODO List. You can add tasks to the list and check / delete them. All items are stored into a local storage so that if you close your browser , next time the tasks will be there.
 
 <img src="gifs/todo2.1.gif">
 
-You can type the task which you want to add to the list and it pressing the cross button.
+You can type the task which you want to add to the list and press the cross button to add it to the task list.
 
 <img src="gifs/add-items2.1.gif">
 
