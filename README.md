@@ -11,7 +11,7 @@ You can check/uncheck and delete the task whenever you want to.
 <img src="gifs/check 2.1.gif">
 
 You can filter the task by: all / checked / unchecked
-<img src="gifs/filter.gif">
+<img src="gifs/filter2.1.gif">
 
 
 Special thanks to DevEd for helping young devs like me learn more!
