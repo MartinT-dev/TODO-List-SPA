@@ -9,33 +9,45 @@
     <title>TODO</title>
 </head>
 <body>
+    <div class="fadeIn">
+            <header>
+                <h1>
+                    TO-DOer
+                </h1>
+            </header>
 
-    <header>
-        <h1>
-            TO-DO
-        </h1>
-    </header>
+            <div id="taskBttn"  class="btnContainer">
 
-  
-        <form>
-            <input type="text" class="todo-input" placeholder="Add your task">
-            <button class="input-bttn" type="submit">
-                <i class="fas fa-plus-square"></i>
-            </button>
-            <div class="select">
-               <select name="todo-items" class="filter-todo-items">
-                    <option value="all">All</option>
-                    <option value="checked">Checked</option>
-                    <option value="unchecked">Unchecked</option>
-                </select>
+                <button class="taskButton"  onclick="toggleTask()">
+                    Add your task.
+                </button>
             </div>
-        </form>
+        
+            <div id="taskId">
+                <form>
+                    <input type="text" class="todo-input" placeholder="Add your task">
+                    <button class="input-bttn" type="submit">
+                        <i class="fas fa-plus-square"></i>
+                    </button>
     
-        <div class="items-container">
-            <ul class="items-list"></div>
-        </div>
-  
+                    <div class="select">
+                       <select name="todo-items" class="filter-todo-items">
+                            <option value="all">All</option>
+                            <option value="checked">Checked</option>
+                            <option value="unchecked">Unchecked</option>
+                        </select>
+                    </div>
+    
+                </form>
+            
+            </div>
+           
+            <div class="items-container">
+                <ul class="items-list"></div>
+            </div>
+      
+    </div>
 
-    <script src="/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

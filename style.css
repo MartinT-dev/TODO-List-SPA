@@ -5,10 +5,8 @@
 }
 
 body{
-    background-color: #E4E4E1;
-    background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
-        background-blend-mode: normal, multiply;
-    color:white;
+    background-color: rgb(34, 32, 32);
+    color:green;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
 }
@@ -35,7 +33,7 @@ form button{
 
 form button{
 
-    color:rgba(34, 26, 26, 0.664);
+    color:rgb(34, 32, 32);
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -44,7 +42,7 @@ form button{
 
 form button:hover{
 
-    background:rgba(34, 26, 26, 0.664);
+    background:rgb(73, 110, 73);
     color: white;
 
 }
@@ -137,7 +135,7 @@ select{
 .select::after{
     content: "\25BC";
     position: absolute;
-    background:rgba(34, 26, 26, 0.664);
+    background:rgb(34, 32, 32);
     top:0;
     right:0;
     padding: 1rem;
@@ -146,12 +144,119 @@ select{
 }
 
 .select:hover::after{
-    background:white;
-    color: rgba(34, 26, 26, 0.664);
+    background: rgb(73, 110, 73);
+    color: white;
 }
 
 header{
-    background-color: rgba(255, 255, 255, 0.781);
-    color: rgb(32, 31, 31);
+    
+    color: rgb(73, 110, 73);
 }
 
+.fadeIn{
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+ #taskId {
+    opacity: 0;
+ }
+
+ #taskId.show{
+    transition: all 1s;
+    height: auto;
+    opacity: 1;
+ }
+
+ #taskBttn.hide{
+    display: none;
+ }
+
+.btnContainer{
+   
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    position: relative;
+    height: 10em;
+    
+}
+
+ .taskButton{
+
+     margin:0;
+     position: absolute;
+     top:50%;
+     left:50%;
+     margin-right: -50%;
+     transform: translate(-50%, -50%);
+     cursor: pointer;
+     background: none;
+     color: #ccc;
+     width: 180px;
+     height: 60px;
+     border: 1px solid #338033;
+     font-size: 18px;
+     border-radius: 4px;
+     transition: .6s;
+     overflow: hidden;
+ }
+
+ .taskButton:focus {
+    outline: none;
+   }
+   
+   .taskButton:before {
+       content: '';
+       display: block;
+       position: absolute;
+       background: rgba(255,255,255,.5);
+       width: 60px;
+       height: 100%;
+       left: 0;
+       top: 0;
+       opacity: .5;
+       filter: blur(30px);
+       transform: translateX(-130px) skewX(-15deg);
+   }
+   
+   .taskButton:after {
+       content: '';
+       display: block;
+       position: absolute;
+       background: rgba(255,255,255,.2);
+       width: 30px;
+       height: 100%;
+       left: 30px;
+       top: 0;
+       opacity: 0;
+       filter: blur(30px);
+       transform: translateX(-100px) scaleX(-15deg);
+   }
+   
+  .taskButton:hover {
+      background:rgb(73, 110, 73);
+      cursor: pointer;
+   }
+   
+   .taskButton:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+   }
+   
+   .taskButton:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+   }
