@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', getItems);
 Button.addEventListener('click', addItem);
 List.addEventListener('click', deleteCheck);
 List.addEventListener('click', checkBttnCheck);
-// Filter.addEventListener('click', filterList);
+Filter.addEventListener('click', filterList);
+
 
 
 //Functions
@@ -26,15 +27,24 @@ function toggleTask(){
    taskBttn.classList.toggle('hide');
 }
 
-//Check if the field is empty
-function checkIfEmpty(){
-    
-}
 
 function addItem(event){
 
     //Prevent the form from submiting
     event.preventDefault();
+
+
+    //Prevents the user from adding an empty task
+    let inputValue = Input.value;
+
+    if(inputValue == "")
+    {
+        //Show alert
+        UI.showAlert('Please add a task.' , 'danger');
+    } 
+
+    //Else do the same things
+    else{
 
     //Item div
     const itemDiv = document.createElement('div');
@@ -65,7 +75,9 @@ function addItem(event){
     //Append all items in the list and clear the input value
     List.appendChild(itemDiv);
     Input.value = "";
+    UI.showAlert('Task created successfully!', 'success');
 
+    }
 }
 
 function deleteCheck(event){
@@ -85,9 +97,11 @@ function deleteCheck(event){
         //Delete the parent
         deleteParent.addEventListener('transitionend', function(){
             deleteParent.remove();
+           
         })
     }
 
+   
 
 }
 
@@ -208,4 +222,27 @@ function removeLocalItems(item){
         //Removing it
       items.splice(items.indexOf(itemIndex) , 1);
       localStorage.setItem('items',JSON.stringify(items));
+}
+
+
+//Classes : For handling the User Interface Tasks and trying classes in JS :)
+
+class UI{
+    static showAlert(message , className){
+        
+        const div = document.createElement('div');
+
+        div.className = `alert alert-${className}`;
+
+        div.appendChild(document.createTextNode(message));
+
+        const alertContainer = document.querySelector('.alertDiv');
+
+        alertContainer.appendChild(div);
+
+        //Vanish in 3s
+
+        setTimeout(() => document.querySelector('.alert').remove(),3000);
+
+    }
 }

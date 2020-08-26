@@ -6,7 +6,6 @@
 
 body{
     background-color: rgb(34, 32, 32);
-    color:green;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
 }
@@ -33,7 +32,7 @@ form button{
 
 form button{
 
-    color:rgb(34, 32, 32);
+    color:rgb(71, 172, 71);
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -42,7 +41,7 @@ form button{
 
 form button:hover{
 
-    background:rgb(73, 110, 73);
+    background:rgb(71, 172, 71);
     color: white;
 
 }
@@ -86,11 +85,24 @@ form button:hover{
 }
 
 .check-bttn{
-    background: rgb(114, 179, 114);
+    background: white;
+    color: rgb(71, 172, 71);
+   
+}
+
+.check-bttn:hover{
+    background: rgb(71, 172, 71);
+    color:white;
 }
 
 .delete-bttn{
-    background:rgb(209, 74, 74);
+    background:white;
+    color:rgb(231, 53, 53);
+}
+
+.delete-bttn:hover{
+    background:rgb(231, 53, 53);
+    color: white;
 }
 
 .todo-item{
@@ -108,7 +120,7 @@ form button:hover{
 }
 
 .fall{
-    transform: translateY(8rem) rotateZ(20deg);
+    transform: translateX(-6rem) rotateZ(20deg);
     opacity: 0;
 }
 
@@ -135,22 +147,24 @@ select{
 .select::after{
     content: "\25BC";
     position: absolute;
-    background:rgb(34, 32, 32);
     top:0;
     right:0;
     padding: 1rem;
     pointer-events: none;
     transition: all .3s ease;
+    background: white;
+    color: rgb(71, 172, 71);
+    
 }
 
 .select:hover::after{
-    background: rgb(73, 110, 73);
-    color: white;
+    background:rgb(71, 172, 71);
+    color:white;
 }
 
 header{
     
-    color: rgb(73, 110, 73);
+    color: rgb(71, 172, 71);
 }
 
 .fadeIn{
@@ -245,7 +259,8 @@ header{
    }
    
   .taskButton:hover {
-      background:rgb(73, 110, 73);
+      background:rgb(57, 155, 57);
+      text-shadow: 2px 2px black;
       cursor: pointer;
    }
    
@@ -259,4 +274,33 @@ header{
     transform: translateX(300px) skewX(-15deg);
     opacity: 1;
     transition: .7s;
+   }
+
+.alertDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+   .alert.alert-danger{
+       font-size: 1.5rem;
+       color:white;
+       background-color: rgb(231, 53, 53);
+       border-radius: 10px;
+       box-shadow: 1px 10px 10px 1px rgb(34, 30, 30);
+       text-shadow: 2px 2px 4px #201e1e;
+       text-align: center;
+       width: 400px;
+       height: 40px;
+   }
+   .alert.alert-success{
+       font-size: 1.6rem;
+       color:white;
+       background-color: rgb(71, 172, 71); 
+       border-radius: 10px;
+       box-shadow: 1px 10px 10px 1px rgb(34, 30, 30);
+       text-shadow: 2px 2px 4px #201e1e;
+       text-align: center;
+       width: 400px;
+       height: 40px;
    }
